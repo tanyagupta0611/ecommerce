@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 
-const API = "http://localhost:4000";
+const API = "https://ecommerce-87im.onrender.com";
 
 function App() {
   const [page, setPage] = useState("login");
