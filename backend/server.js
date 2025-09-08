@@ -4,8 +4,17 @@ const cors = require("cors");
 const bodyParser = require("body-parser");
 
 const app = express();
-app.use(cors());
+
+// ✅ Replace generic cors() with specific options
+const corsOptions = {
+  origin: "https://ecommerce-1-hehu.onrender.com", // your frontend Render URL
+  methods: "GET,POST,DELETE",
+  allowedHeaders: "Content-Type,Authorization"
+};
+
+app.use(cors(corsOptions));
 app.use(bodyParser.json());
+
 
 const SECRET = "secret123";
 
